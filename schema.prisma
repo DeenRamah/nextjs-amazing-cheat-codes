@@ -30,5 +30,7 @@ owneer         User       @relation("Owner", fields: [userEmail], references: [e
 createdAt      DateTime   @default(now())
 updatedAt      DateTime   @updatedAt
 }
+
+@@unique(fileds: [address, userEmail])
 // then after that you will write npx prisma db push
 // then you will add npx prisma generate
