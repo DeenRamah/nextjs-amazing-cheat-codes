@@ -1,4 +1,7 @@
 //when setting up my prisma for my real estate application where mongoDb wa used for database
+generator client {
+provider = "prisma-client-js"
+}
 
 datasource db{
 provider = "mongodb"
