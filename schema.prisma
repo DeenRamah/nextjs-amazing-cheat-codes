@@ -1,0 +1,32 @@
+//when setting up my prisma for my real estate application where mongoDb wa used for database
+
+datasource db{
+provider = "mongodb"
+url = env("DATABASE_URL")
+}
+
+model User {
+id                String @id @default(auto()) @map("_id") @db.ObjectID
+name              String?
+email             String @unique
+image             String?
+bookedVisits      Json[]
+favResidencesID   String[] @db.Objectid
+ownedResidencies         Residency[] @realtion("Owner")
+}
+
+model Residency {
+id             String @id @default(auto()) @map("_id") @db.ObjectId
+tite           String
+description    String
+price          Int
+address        String
+city           String
+counrty        String
+image          String
+facilities     String
+userEmail      String
+owneer         User       @relation("Owner", fields: [userEmail], references: [email])
+createdAt      DateTime   @default(now())
+updatedAt      DateTime   @updatedAt
+}
