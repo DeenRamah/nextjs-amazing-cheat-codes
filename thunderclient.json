@@ -1,0 +1,14 @@
+{
+  "data": {
+    "title": "The best",
+    "description": "It is the best ever",
+    "price":1000,
+    "address": "The New Nakuru",
+    "city": "Nakuru",
+    "country": "Kenya",
+    "Image" : "pop.jpg",
+    "Facilities": {"beds": 2}
+  }
+}
+
+// how to put data in thunder client after 
