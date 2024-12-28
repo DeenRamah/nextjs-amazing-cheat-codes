@@ -7,7 +7,8 @@
     "city": "Nakuru",
     "country": "Kenya",
     "Image" : "pop.jpg",
-    "Facilities": {"beds": 2}
+    "Facilities": {"beds": 2},
+    "userEmail": "deenramah4@gmail.com"
   }
 }
 
